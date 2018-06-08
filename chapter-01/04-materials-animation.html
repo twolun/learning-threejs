@@ -93,11 +93,15 @@
       
       // renderer.render(scene, camera);
       renderScene();
+      var step = 0;
       function renderScene() {
         stats.update();
         cube.rotation.x += 0.02;
         cube.rotation.y += 0.02;
         cube.rotation.z += 0.02;
+
+        step += 0.04;
+        sphere.position.x = 
         requestAnimationFrame(renderScene);
         renderer.render(scene, camera);
       }
